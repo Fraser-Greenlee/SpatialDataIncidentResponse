@@ -13,7 +13,7 @@ This GitHub repository contains Python scripts ```AugmentLocations.py```, which:
   - British National Grid easting and northing
   - Ordnance Survey 1m grid reference
   - What3Words address
-  - Google Maps URL
+  - Google Maps URL (cross-platform app integration)
 - and metadata:
   - road access type
   - nearest postcode

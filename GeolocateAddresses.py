@@ -52,8 +52,8 @@ Setup:
 
 
 # User-defined variables
-teammembers_filepath = "/TeamMembers_Master.ods" # Filepath to team members spreadsheet
-codepoint_filepath = "/codepo_gb.gpkg" # Download from https://osdatahub.os.uk/downloads/open/CodePointOpen and extract
+teammembers_filepath = "/TeamMembers_Master.ods" # Team members spreadsheet filepath
+codepoint_filepath = "/codepo_gb.gpkg" # CodePoint filepath
 export_directory = "/Processed" # Any directory to export the processed files to
 
 

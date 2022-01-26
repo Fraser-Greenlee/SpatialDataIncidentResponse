@@ -7,7 +7,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 \
 **Contents**
 
-This GitHub repository contains Python scripts ```AugmentLocations.py```, which:
+```AugmentLocations.py```:
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
 - adds accurate spatial conversions from longitude and latitude coordinates to:
   - British National Grid easting and northing
@@ -20,7 +20,7 @@ This GitHub repository contains Python scripts ```AugmentLocations.py```, which:
   - mobile phone coverage for all providers
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
-and ```GeolocateAddresses.py```, which:
+```GeolocateAddresses.py```:
 - ingests team member addresses recorded in a spreadsheet (a spreadsheet template is provided)
 - extracts postcodes from the addresses
 - adds longitude and latitude coordinates using the postcode, resulting in an approximate location

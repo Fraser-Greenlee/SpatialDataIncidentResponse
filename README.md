@@ -5,7 +5,7 @@
 Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations in addition to locating specific team members best positioned to respond. This provides the opportunity to accurately record these locations and other useful information in advance of incidents occurring. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs), and team member locations.
 \
 \
-This GitHub repository contains ```AugmentLocations.py```, which:
+This GitHub repository contains Python scripts ```AugmentLocations.py```, which:
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
 - adds accurate spatial conversions from longitude and latitude coordinates to:
   - British National Grid easting and northing

@@ -72,8 +72,8 @@ Setup:
 
 
 # User-defined variables
-rv_filepath = "/RVs_Master.ods" # RVs spreadsheet filepath
 ap_filepath = "/APs_Master.ods" # APs spreadsheet filepath
+rv_filepath = "/RVs_Master.ods" # RVs spreadsheet filepath
 codepoint_filepath = "/codepo_gb.gpkg" # Code Point filepath
 openroads_filepath = "/oproad_gb.gpkg" # Open Roads filepath
 export_directory = "/Processed" # Any directory to export the processed files to
@@ -208,7 +208,7 @@ def xy_to_osgb(easting, northing, precision = 1):
 
 
 # Check that all filepaths and directories exist
-for path in [rv_filepath, ap_filepath, codepoint_filepath,
+for path in [ap_filepath, rv_filepath, codepoint_filepath,
              openroads_filepath, export_directory]:
     if not os.path.exists(path):
         raise Exception('Path ' + str(path) + ' does not exist')

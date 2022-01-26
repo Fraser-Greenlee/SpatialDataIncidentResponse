@@ -7,7 +7,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 \
 **Contents**
 
-The follow scripts use data available only for mainland GB from the Ordnance Survey, therefore areas outside mainland GB are unsupported.
+The follow scripts use data available only for mainland GB, therefore areas outside mainland GB are unsupported.
 
 ```AugmentLocations.py```:
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)

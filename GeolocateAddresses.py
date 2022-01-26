@@ -53,7 +53,7 @@ Setup:
 
 # User-defined variables
 teammembers_filepath = "/TeamMembers_Master.ods" # Team members spreadsheet filepath
-codepoint_filepath = "/codepo_gb.gpkg" # CodePoint filepath
+codepoint_filepath = "/codepo_gb.gpkg" # Code Point filepath
 export_directory = "/Processed" # Any directory to export the processed files to
 
 
@@ -135,8 +135,8 @@ data['Info'] = data.pop('Name').astype(str) + " (" + data.pop('Concat').astype(s
 
 
 
-print(" - Reading OS CodePoint Data")
-# Read in OS CodePoint data
+print(" - Reading Code Point Data")
+# Read in Code Point data
 postcodes = gpd.read_file(codepoint_filepath)
 postcodes.crs = "EPSG:27700"
 postcodes = postcodes[['Postcode', 'geometry']]

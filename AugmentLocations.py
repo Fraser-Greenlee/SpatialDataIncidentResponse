@@ -72,10 +72,10 @@ Setup:
 
 
 # User-defined variables
-rv_filepath = "/RVs_Master.ods" # Filepath to RV spreadsheet
-ap_filepath = "/APs_Master.ods" # Filepath to AP spreadsheet
-codepoint_filepath = "/codepo_gb.gpkg" # Path to file
-openroads_filepath = "/oproad_gb.gpkg" # Path to file
+rv_filepath = "/RVs_Master.ods" # RV spreadsheet filepath
+ap_filepath = "/APs_Master.ods" # AP spreadsheet filepath
+codepoint_filepath = "/codepo_gb.gpkg" # Code Point filepath
+openroads_filepath = "/oproad_gb.gpkg" # Open Roads filepath
 export_directory = "/Processed" # Any directory to export the processed files to
 ofcom_api_key = '#####' # Paste your API key here
 what3words_api_key = '#####' # Paste your API key here
@@ -293,7 +293,7 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
     if location_type == 'RVs':
         
         print(" - Road Access Type")
-        # Read in OS Open Roads data within a distance of each RV as BNG
+        # Read in Open Roads data within a distance of each RV as BNG
         road_dist = 50
         roads = gpd.read_file(openroads_filepath,
                               mask = point_buffer(data, road_dist, "EPSG:27700"))
@@ -327,7 +327,7 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
         
         
         print(" - Postcode")
-        # Read in OS CodePoint data within a distance of each RV as BNG
+        # Read in Code Point data within a distance of each RV as BNG
         postcode_dist = 300
         postcodes = gpd.read_file(codepoint_filepath,
                                   mask = point_buffer(data, postcode_dist, "EPSG:27700"))

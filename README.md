@@ -35,4 +35,4 @@ and ```GeolocateAddresses.py```, which:
 \
 **Setup**
 
-East Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.
+Each Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.

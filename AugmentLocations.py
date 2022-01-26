@@ -74,11 +74,11 @@ Setup:
 # User-defined variables
 rv_filepath = "/RVs_Master.ods" # Filepath to RV spreadsheet
 ap_filepath = "/APs_Master.ods" # Filepath to AP spreadsheet
-codepoint_filepath = "/codepo_gb.gpkg" # Download from https://osdatahub.os.uk/downloads/open/CodePointOpen and extract
-openroads_filepath = "/oproad_gb.gpkg" # Download from https://osdatahub.os.uk/downloads/open/OpenRoads and extract
+codepoint_filepath = "/codepo_gb.gpkg" # Path to file
+openroads_filepath = "/oproad_gb.gpkg" # Path to file
 export_directory = "/Processed" # Any directory to export the processed files to
-ofcom_api_key = '#####' # Register at https://api.ofcom.org.uk/products/mobile-premium
-what3words_api_key = '#####' # Register at https://developer.what3words.com/public-api
+ofcom_api_key = '#####' # Paste your API key here
+what3words_api_key = '#####' # Paste your API key here
 rv_gpx_symbology = 'None' # Optional - Replace with the symbology text string that is unique to the GPS device
 ap_gpx_symbology = 'None'# Optional - Replace with the symbology text string that is unique to the GPS device
 

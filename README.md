@@ -2,7 +2,7 @@
 
 **Rationale**
 
-Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations in addition to locating specific team members best positioned to respond. This provides the opportunity to accurately record these locations and other useful information in advance of incidents occurring. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs), and team member locations.
+Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations in addition to locating specific team members best positioned to respond. This provides the opportunity to accurately record these locations and other useful information in advance of incidents occurring and make them readily accessible. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs), and team member locations.
 
 \
 **Contents**

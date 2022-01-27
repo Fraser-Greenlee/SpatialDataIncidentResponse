@@ -31,10 +31,13 @@ The follow scripts use data available only for mainland GB, therefore areas outs
 \
 **Templates**
 
-- ```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services for remote mapping
-- ```APs_Master.ods``` - spreadsheet for recording APs
-- ```RVs_Master.ods``` - spreadsheet for recording RVs
-- ```TeamMembers_Master.ods``` - spreadsheet for recording team member addresses
+```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services for remote mapping
+
+```APs_Master.ods``` - spreadsheet for recording APs
+
+```RVs_Master.ods``` - spreadsheet for recording RVs
+
+```TeamMembers_Master.ods``` - spreadsheet for recording team member addresses
 
 \
 **Setup**

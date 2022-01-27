@@ -7,7 +7,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 \
 **Contents**
 
-The follow scripts use data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
+The follow scripts use data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported. Each Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.
 
 ```AugmentLocations.py```:
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
@@ -38,8 +38,3 @@ The follow scripts use data available only for mainland Great Britain, therefore
 ```RVs_Master.ods``` - spreadsheet for recording RVs
 
 ```TeamMembers_Master.ods``` - spreadsheet for recording team member addresses
-
-\
-**Setup**
-
-Each Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.

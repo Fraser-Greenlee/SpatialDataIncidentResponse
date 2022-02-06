@@ -22,6 +22,26 @@ The follow scripts use data available only for mainland Great Britain, therefore
   - mobile phone coverage for all providers
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
+**Example conversions and metadata produced.**
+
+From:
+| ID   | Name           | Longitude | Latitude | VerifiedDate | Notes |
+|------|----------------|-----------|----------|--------------|-------|
+| AP_1 | Cwmorthin Adit | -3.96894  | 52.99787 | 11/11/21     | Gated |
+
+| ID   | Name                 | Longitude   | Latitude    | VerifiedDate | ParkingType    | Notes                                                                                               |
+|------|----------------------|-------------|-------------|--------------|----------------|-----------------------------------------------------------------------------------------------------|
+| RV_1 | NWCRO Llanrwst Store | -3.80048028 | 53.13997834 | 07/08/21     | Police Station | Needs police presence |
+
+To:
+| Name                  | Notes | Verified | VerifiedDate | Longitude | Latitude | Easting | Northing | OSGridRef1m    | What3Words                   | GoogleMapsURL                                                       |
+|-----------------------|-------|----------|--------------|-----------|----------|---------|----------|----------------|------------------------------|---------------------------------------------------------------------|
+| Cwmorthin Adit (AP_1) | Gated | True     | 2021-11-11   | -3.96894  | 52.99787 | 267958  | 346317   | SH 67958 46317 | blanking.simulates.processor | https://www.google.com/maps/search/?api=1&query=52.99787%2C-3.96894 |
+
+| Name                        | ParkingType    | Notes                                                                                               | Verified | VerifiedDate | RoadAccessType    | Postcode | MobileCoverage                                          | Longitude   | Latitude    | Easting | Northing | OSGridRef1m    | What3Words           | GoogleMapsURL                                                             |
+|-----------------------------|----------------|-----------------------------------------------------------------------------------------------------|----------|--------------|-------------------|----------|---------------------------------------------------------|-------------|-------------|---------|----------|----------------|----------------------|---------------------------------------------------------------------------|
+| NWCRO Llanrwst Store (RV_1) | Police Station | Needs police presence | True     | 2021-08-07   | Local Access Road | LL260DF  | EE (Green), Three (Green), Vodafone (Green), O2 (Green) | -3.80048028 | 53.13997834 | 279659  | 361827   | SH 79659 61827 | saying.lousy.elevate | https://www.google.com/maps/search/?api=1&query=53.13997834%2C-3.80048028 |
+
 ```GeolocateAddresses.py```:
 - ingests team member addresses recorded in a spreadsheet (a spreadsheet template is provided)
 - extracts postcodes from the addresses

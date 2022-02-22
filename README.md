@@ -49,7 +49,6 @@ Output:
 
 
 
-\
 # Templates
 
 ```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services for remote mapping

@@ -4,7 +4,7 @@
 
 # Rationale
 
-Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations in addition to locating specific team members best positioned to respond. This provides the opportunity to accurately record these locations and other useful information in advance of incidents occurring and make them readily accessible. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs), and team member locations.
+Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations. This provides the opportunity to accurately record these locations and make them readily accessible in advance of incidents occurring, allowing incident controllers access to detailed location information ready for rapid and error-free sharing with team members and other emergency services. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs).
 
 
 
@@ -47,34 +47,13 @@ Output:
 |-----------------------------|----------------|-----------------------------------------------------------------------------------------------------|----------|--------------|-------------------|----------|---------------------------------------------------------|-------------|-------------|---------|----------|----------------|----------------------|---------------------------------------------------------------------------|
 | NWCRO Llanrwst Store (RV_1) | Police Station | Needs police presence | True     | 2021-08-07   | Local Access Road | LL260DF  | EE (Green), Three (Green), Vodafone (Green), O2 (Green) | -3.80048028 | 53.13997834 | 279659  | 361827   | SH 79659 61827 | saying.lousy.elevate | https://www.google.com/maps/search/?api=1&query=53.13997834%2C-3.80048028 |
 
+
+
 \
-```GeolocateAddresses.py```
-
-**Function:**
-- ingests team member addresses recorded in a spreadsheet (a spreadsheet template is provided)
-- extracts postcodes from the addresses
-- adds longitude and latitude coordinates using the postcode, resulting in an approximate location
-- exports this information in a variety of useful formats (.csv, .gpkg)
-
-**Example:**
-
-Input:
-| Name    | Contact      | Notes    | Address                                           |
-|---------|--------------|----------|---------------------------------------------------|
-| Member1 | PhoneNumber1 | Comment1 | 7 Carno Bettws NP20 7GU                     |
-
-Output:
-| Info                                               | Longitude         | Latitude         |
-|----------------------------------------------------|-------------------|------------------|
-| Member1 (Contact: PhoneNumber1 \| Notes: Comment1) | -3.01810699882841 | 51.6077010367438 |
-
-
-
 # Templates
+
 ```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services for remote mapping
 
 ```APs_Master.ods``` - spreadsheet for recording APs
 
 ```RVs_Master.ods``` - spreadsheet for recording RVs
-
-```TeamMembers_Master.ods``` - spreadsheet for recording team member addresses

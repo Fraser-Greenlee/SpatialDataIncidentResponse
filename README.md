@@ -9,7 +9,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Code
-The follow scripts use data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported. Python scripts contain essential setup instructions that are required prior to their use to ensure accuracy and correct function.
+The following script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported. The Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.
 
 \
 ```AugmentLocations.py```

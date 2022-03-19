@@ -9,10 +9,12 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Code
-The following script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported. The Python script contains essential setup instructions that are required prior to use to ensure accuracy and correct function.
+The following script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 
 \
 ```AugmentLocations.py```
+
+**Dependencies:** Numpy, Pandas, Geopandas, GPXpy, ODF
 
 **Function:**
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
@@ -27,9 +29,9 @@ The following script uses data available only for mainland Great Britain, theref
   - mobile phone coverage for all providers
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
-**Example:**
+**Example Transformations:**
 
-Input:
+Inputs:
 | ID   | Name           | Longitude | Latitude | VerifiedDate | Notes |
 |------|----------------|-----------|----------|--------------|-------|
 | AP_1 | Cwmorthin Adit | -3.96894  | 52.99787 | 11/11/21     | Gated |
@@ -38,7 +40,7 @@ Input:
 |------|----------------------|-------------|-------------|--------------|----------------|-----------------------------------------------------------------------------------------------------|
 | RV_1 | NWCRO Llanrwst Store | -3.80048028 | 53.13997834 | 07/08/21     | Police Station | Needs police presence |
 
-Output:
+Outputs:
 | Name                  | Notes | Verified | VerifiedDate | Longitude | Latitude | Easting | Northing | OSGridRef1m    | What3Words                   | GoogleMapsURL                                                       |
 |-----------------------|-------|----------|--------------|-----------|----------|---------|----------|----------------|------------------------------|---------------------------------------------------------------------|
 | Cwmorthin Adit (AP_1) | Gated | True     | 2021-11-11   | -3.96894  | 52.99787 | 267958  | 346317   | SH 67958 46317 | blanking.simulates.processor | https://www.google.com/maps/search/?api=1&query=52.99787%2C-3.96894 |

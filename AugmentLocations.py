@@ -38,35 +38,6 @@ Column list:
         OSGridRef1m - Ordnance Survey 1m grid reference
         What3Words - What3Words address
         GoogleMapsURL - Google Maps link for directions and Street View
-
-Setup:
-    1. To ensure the most accurate conversion between longitude and latitude
-    and British National Grid, the OSTN15-NTv2 transformation is required. To
-    check if this is installed, run:
-
-        import pyproj
-        tg = pyproj.transformer.TransformerGroup(27700, 4326)
-        descriptions = "\n\n".join([str(i) for i in tg.transformers])
-        if "OSTN15_NTv2" in descriptions:
-            print("OSTN15_NTv2 is present")
-        else:
-            print("OSTN15_NTv2 is not present")
-
-    If OSTN15_NTv2 is not present, download and extract the files in
-    https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to the
-    directory produced by:
-
-        import pyproj
-        print(pyproj.datadir.get_data_dir())
-        
-    2. Download files and register for API keys:
-        - OS GB Postcode data - https://osdatahub.os.uk/downloads/open/CodePointOpen
-        - OS GB Road data - https://osdatahub.os.uk/downloads/open/OpenRoads
-        - Ofcom Mobile API - https://api.ofcom.org.uk/products/mobile-premium
-        - What3Words API - https://developer.what3words.com/public-api
-        
-    3. Edit the user-defined variables to point to the required locations and
-    include your API keys
 """
 
 
@@ -74,11 +45,11 @@ Setup:
 # User-defined variables
 ap_filepath = "/APs_Master.ods" # APs spreadsheet filepath
 rv_filepath = "/RVs_Master.ods" # RVs spreadsheet filepath
-codepoint_filepath = "/codepo_gb.gpkg" # Code Point filepath
-openroads_filepath = "/oproad_gb.gpkg" # Open Roads filepath
+codepoint_filepath = "/codepo_gb.gpkg" # Code Point filepath (https://osdatahub.os.uk/downloads/open/CodePointOpen)
+openroads_filepath = "/oproad_gb.gpkg" # Open Roads filepath (https://osdatahub.os.uk/downloads/open/OpenRoads)
 export_directory = "/Processed" # Any directory to export the processed files to
-ofcom_api_key = '#####' # Paste your API key here
-what3words_api_key = '#####' # Paste your API key here
+ofcom_api_key = '#####' # Paste your API key here (https://api.ofcom.org.uk/products/mobile-premium)
+what3words_api_key = '#####' # Paste your API key here (https://developer.what3words.com/public-api)
 rv_gpx_symbology = 'None' # Optional - Replace with the symbology text string that is unique to the GPS device
 ap_gpx_symbology = 'None'# Optional - Replace with the symbology text string that is unique to the GPS device
 
@@ -213,8 +184,15 @@ for path in [ap_filepath, rv_filepath, codepoint_filepath,
     if not os.path.exists(path):
         raise Exception('Path ' + str(path) + ' does not exist')
 
+# Check for correct transformation
+import pyproj
+tg = pyproj.transformer.TransformerGroup(27700, 4326)
+descriptions = "\n\n".join([str(i) for i in tg.transformers])
+if "OSTN15_NTv2" not in descriptions:
+    raise Exception("OSTN15_NTv2 is not present, extract the files in https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to " + pyproj.datadir.get_data_dir())
 
-        
+
+ 
 # Timestamp
 date = datetime.now().strftime("%Y-%m-%d")
 

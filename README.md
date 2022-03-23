@@ -9,28 +9,36 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Methodology
-- catalogue APs and RVs in the spreadsheet templates using the QGIS mapping template to generate point coordinates
-- use ```AugmentLocations.py``` to add conversions and metadata, and export the data in useful formats
-- serve the exported files (free and open source examples are shown below)
-
-**Google Maps (online)**
-\
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png" height="400">
-\
-**QGIS (local PC)**
-\
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png" height="400">
-\
-**Mobile Device (offline)**
-\
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="400">
+- use the QGIS mapping template to generate point WGS84 coordinates (longitude, latitude) and paste them into the spreadsheet templates <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
+- use ```AugmentLocations.py``` to add conversions and metadata to the spreadsheet records, and export the data in useful formats
+- serve the exported files
 
 
-# Code
-The following script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 
-\
-```AugmentLocations.py```
+# Data Serving
+Below are free and open source methods of serving the data that also allow the interrogation of location metadata.
+
+**Google Maps**
+- uses .csv files for upload
+- online access (user permissions for privacy)
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png" height="300">
+
+
+**QGIS**
+- can ingest any spatial data format
+- local PC only
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png" height="300">
+
+
+**Mobile Device**
+- uses .gpx files for import
+- offline navigation and data access
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="300">
+
+
+
+# AugmentLocations.py
+The script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 
 **Dependencies:** Numpy, Pandas, Geopandas, GPXpy, ODF
 
@@ -45,7 +53,7 @@ The following script uses data available only for mainland Great Britain, theref
   - road access type
   - nearest postcode
   - mobile phone coverage for all providers
-- exports this information in a variety of useful formats (.csv, .gpkg, .gpx) for serving within online maps, GIS software or on handheld devices
+- exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
 **Example Transformations:**
 

@@ -52,7 +52,7 @@ export_directory = "/Processed" # Any directory to export the processed files to
 ofcom_api_key = '#####' # Paste your API key here (https://api.ofcom.org.uk/products/mobile-premium)
 what3words_api_key = '#####' # Paste your API key here (https://developer.what3words.com/public-api)
 rv_gpx_symbology = 'None' # Optional - Replace with the symbology text string that is unique to the GPS device
-ap_gpx_symbology = 'None'# Optional - Replace with the symbology text string that is unique to the GPS device
+ap_gpx_symbology = 'None' # Optional - Replace with the symbology text string that is unique to the GPS device
 
 
 

@@ -27,7 +27,7 @@ The following script uses data available only for mainland Great Britain, theref
   - road access type
   - nearest postcode
   - mobile phone coverage for all providers
-- exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
+- exports this information in a variety of useful formats (.csv, .gpkg, .gpx) for serving within online maps, GIS software or on handheld devices
 
 **Example Transformations:**
 

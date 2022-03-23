@@ -9,7 +9,16 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Methodology
-- use the QGIS mapping template to generate point WGS84 coordinates (longitude, latitude) and paste them into the spreadsheet templates <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
+- use ```Mapping.qgz``` to generate coordinates (WGS84 - longitude, latitude) for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
+
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
+
+  ```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services (imagery, LIDAR) for remote location mapping
+  
+  ```APs_Master.ods``` - spreadsheet for recording APs
+
+  ```RVs_Master.ods``` - spreadsheet for recording RVs
+
 - use ```AugmentLocations.py``` to add conversions and metadata to the spreadsheet records, and export the data in useful formats
 - serve the exported files
 
@@ -21,19 +30,22 @@ Below are free and open source methods of serving the data that also allow the i
 **Google Maps**
 - uses .csv files for upload
 - online access (user permissions for privacy)
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png" height="300">
+  
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png" height="300">
 
 
 **QGIS**
 - can ingest any spatial data format
 - local PC only
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png" height="300">
+  
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png" height="300">
 
 
 **Mobile Device**
 - uses .gpx files for import
 - offline navigation and data access
-<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="300">
+  
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="300">
 
 
 
@@ -43,8 +55,8 @@ The script uses data available only for mainland Great Britain, therefore areas 
 **Dependencies:** Numpy, Pandas, Geopandas, GPXpy, ODF
 
 **Function:**
-- ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
-- APs and RVs - adds accurate spatial conversions from longitude and latitude coordinates to:
+- ingests APs and RVs recorded in spreadsheets
+- APs and RVs - adds spatial conversions from longitude and latitude coordinates to:
   - British National Grid easting and northing
   - Ordnance Survey 1m grid reference
   - What3Words address
@@ -74,13 +86,3 @@ Outputs:
 | Name                        | ParkingType    | Notes                                                                                               | Verified | VerifiedDate | RoadAccessType    | Postcode | MobileCoverage                                          | Longitude   | Latitude    | Easting | Northing | OSGridRef1m    | What3Words           | GoogleMapsURL                                                             |
 |-----------------------------|----------------|-----------------------------------------------------------------------------------------------------|----------|--------------|-------------------|----------|---------------------------------------------------------|-------------|-------------|---------|----------|----------------|----------------------|---------------------------------------------------------------------------|
 | NWCRO Llanrwst Store (RV_1) | Police Station | Needs police presence | True     | 2021-08-07   | Local Access Road | LL260DF  | EE (Green), Three (Green), Vodafone (Green), O2 (Green) | -3.80048028 | 53.13997834 | 279659  | 361827   | SH 79659 61827 | saying.lousy.elevate | https://www.google.com/maps/search/?api=1&query=53.13997834%2C-3.80048028 |
-
-
-
-# Templates
-
-```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services for remote mapping
-
-```APs_Master.ods``` - spreadsheet for recording APs
-
-```RVs_Master.ods``` - spreadsheet for recording RVs

@@ -9,18 +9,12 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Methodology
-- use ```Mapping.qgz``` to generate coordinates (WGS84 - longitude, latitude) for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
+- use ```Mapping.qgz``` ([QGIS](https://qgis.org/en/site/) project containing various web map services for remote location mapping) to generate WGS84 longitude, latitude coordinates for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
 
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
 
-  ```Mapping.qgz``` - [QGIS](https://qgis.org/en/site/) project containing various web map services (imagery, LIDAR) for remote location mapping
-  
-  ```APs_Master.ods``` - spreadsheet for recording APs
-
-  ```RVs_Master.ods``` - spreadsheet for recording RVs
-
-- use ```AugmentLocations.py``` to add conversions and metadata to the spreadsheet records, and export the data in useful formats
-- serve the exported files
+- use ```AugmentLocations.py``` to automatically add conversions and metadata to the spreadsheet records, and export the data in useful formats
+- serve the exported files according to your requirements
 
 
 
@@ -50,21 +44,20 @@ Below are free and open source methods of serving the data that also allow the i
 
 
 # AugmentLocations.py
-The script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
+```AugmentLocations.py``` uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 
-**Dependencies:** Numpy, Pandas, Geopandas, GPXpy, ODF
+**Dependencies:**
+- Numpy
+- Pandas
+- GeoPandas
+- GPXpy
+- ODF
 
 **Function:**
 - ingests APs and RVs recorded in spreadsheets
-- APs and RVs - adds spatial conversions from longitude and latitude coordinates to:
-  - British National Grid easting and northing
-  - Ordnance Survey 1m grid reference
-  - What3Words address
-  - Google Maps URL (cross-platform app integration)
-- RVs - adds metadata:
-  - road access type
-  - nearest postcode
-  - mobile phone coverage for all providers
+- adds spatial conversions and metadata using the WGS84 longitude, latitude coordinates
+
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="300">
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
 **Example Transformations:**

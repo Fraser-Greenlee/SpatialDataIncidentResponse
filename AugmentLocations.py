@@ -22,10 +22,10 @@ Description:
 
 Column list:
     Required in spreadsheet (additional columns are unaltered):
-        Name - Location name
         ID - Unique identifier
-        VerifiedDate - Date of visit to verify location
+        Name - Location name
         LongLat - Longitude, Latitude in decimal degrees (WGS84)
+        VerifiedDate - Date of visit to verify location
     Generated for RVs only:
         RoadAccessType - Nearest road type
         Postcode - Nearest postcode

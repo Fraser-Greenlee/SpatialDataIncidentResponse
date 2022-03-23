@@ -130,7 +130,7 @@ def redistribute_vertices(geom, distance):
         parts = [redistribute_vertices(part, distance) for part in geom]
         return type(geom)([p for p in parts if not p.is_empty])
     else:
-        raise ValueError("Unhandled geometry %s", (geom.geom_type))
+        raise ValueError('Unhandled geometry ' + geom.geom_type)
 
 def xy_to_osgb(easting, northing, precision = 1):
     major = {0: {0: 'S', 1: 'N', 2: 'H'},
@@ -142,7 +142,7 @@ def xy_to_osgb(easting, northing, precision = 1):
              4: {0: 'Z', 1: 'U', 2: 'P', 3: 'K', 4: 'E'}}
     
     if precision not in [100000, 10000, 1000, 100, 10, 1]:
-        raise Exception('Precision of', str(precision), 'is not supported')
+        raise Exception('Precision of ' + str(precision) + ' is not supported')
     
     try:
         x_idx = easting // 500000

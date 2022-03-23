@@ -6,7 +6,7 @@
 
 Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations. This provides the opportunity to accurately record these locations and make them readily accessible in advance of incidents occurring, allowing incident controllers access to detailed location information ready for rapid and error-free sharing with team members and other emergency services. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs).
 
-
+![alt text](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/GoogleMap.png?raw=true)
 
 # Code
 The following script uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.

@@ -9,16 +9,21 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 # Methodology
-- catalogue AP and RV locations in the provided spreadsheet templates using the QGIS mapping template
-- augment the spreadsheets to add conversions and metadata
+- catalogue APs and RVs in the spreadsheet templates using the QGIS mapping template to generate point coordinates
+- use ```AugmentLocations.py``` to add conversions and metadata, and export the data in useful formats
 - serve the exported files (free and open source examples are shown below)
 
 **Google Maps (online)**
-![alt text](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png?raw=true)
+\
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Google.png" height="400">
+\
 **QGIS (local PC)**
-![alt text](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png?raw=true)
+\
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/QGIS.png" height="400">
+\
 **Mobile Device (offline)**
-![alt text](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png?raw=true)
+\
+<img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="400">
 
 
 # Code

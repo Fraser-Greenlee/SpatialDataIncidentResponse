@@ -18,12 +18,12 @@ The following script uses data available only for mainland Great Britain, theref
 
 **Function:**
 - ingests APs and RVs recorded in spreadsheets (spreadsheet and QGIS mapping templates are provided)
-- adds accurate spatial conversions from longitude and latitude coordinates to:
+- APs and RVs - adds accurate spatial conversions from longitude and latitude coordinates to:
   - British National Grid easting and northing
   - Ordnance Survey 1m grid reference
   - What3Words address
   - Google Maps URL (cross-platform app integration)
-- adds metadata:
+- RVs - adds metadata:
   - road access type
   - nearest postcode
   - mobile phone coverage for all providers

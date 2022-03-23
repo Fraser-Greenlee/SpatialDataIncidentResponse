@@ -25,13 +25,14 @@ Column list:
         Name - Location name
         ID - Unique identifier
         VerifiedDate - Date of visit to verify location
-        Longitude - Decimal degrees (WGS84)
-        Latitude - Decimal degrees (WGS84)
+        LongLat - Longitude, Latitude in decimal degrees (WGS84)
     Generated for RVs only:
         RoadAccessType - Nearest road type
         Postcode - Nearest postcode
         MobileCoverage - Minimum outdoor mobile phone coverage
     Generated for all locations:
+        Longitude - Decimal degrees (WGS84)
+        Latitude - Decimal degrees (WGS84)
         Verified - Binary flag if checked
         Easting - Metres (British National Grid)
         Northing - Metres (British National Grid)
@@ -208,7 +209,7 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
     
     print(" - Formatting Inputs")
     # Check for blanks in essential columns
-    for i in ['ID', 'Name', 'Longitude', 'Latitude']:
+    for i in ['ID', 'Name', 'LongLat']:
         if data[i].isna().sum() > 0:
             raise Exception(i + ' contains blank values')
     
@@ -219,15 +220,16 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
     except:
         raise Exception(i + ' contains non-string values')
     try:
-        for i in ['VerifiedDate']:
-            data[i] = pd.to_datetime(data[i])
+            data['VerifiedDate'] = pd.to_datetime(data['VerifiedDate'])
     except:
-        raise Exception(i + ' contains non-datetime values')
+        raise Exception('VerifiedDate contains non-datetime values')
     try:
+        data[['Longitude', 'Latitude']] = data['LongLat'].str.split(",", expand = True)
+        del data['LongLat']
         for i in ['Longitude', 'Latitude']:
             data[i] = data[i].astype(float)
     except:
-        raise Exception(i + ' contains non-numeric values')
+        raise Exception("LongLat does not contain comma-separated numeric values")
     
     # Check for duplicate IDs
     if len(data['ID']) != len(set(data['ID'])):

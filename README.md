@@ -46,16 +46,11 @@ Below are free and open source methods of serving the data that also allow the i
 # AugmentLocations.py
 ```AugmentLocations.py``` uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 
-**Dependencies:**
-- Numpy
-- Pandas
-- GeoPandas
-- GPXpy
-- ODF
+**Dependencies:** Numpy, Pandas, GeoPandas, GPXpy, ODF
 
 **Function:**
 - ingests APs and RVs recorded in spreadsheets
 - adds spatial conversions and metadata using the WGS84 longitude, latitude coordinates
 
-  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="300">
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="500">
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)

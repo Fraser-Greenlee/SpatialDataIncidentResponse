@@ -61,6 +61,7 @@ import time
 import http.client
 import urllib.parse
 import json
+import warnings
 import numpy as np
 import pandas as pd
 import geopandas as gpd
@@ -275,8 +276,11 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
         print(" - Road Access Type")
         # Read in Open Roads data within a distance of each RV as BNG
         road_dist = 50
-        roads = gpd.read_file(openroads_filepath,
-                              mask = point_buffer(data, road_dist, "EPSG:27700"))
+        with warnings.catch_warnings():
+            # Handle a bug when reading files
+            warnings.filterwarnings('ignore', message = "Sequential read of iterator was interrupted")
+            roads = gpd.read_file(openroads_filepath,
+                                  mask = point_buffer(data, road_dist, "EPSG:27700"))
         roads.crs = "EPSG:27700"
         # Keep only necessary columns
         roads = roads[['roadFunction', 'geometry']]
@@ -311,8 +315,11 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
         print(" - Postcode")
         # Read in Code Point data within a distance of each RV as BNG
         postcode_dist = 300
-        postcodes = gpd.read_file(codepoint_filepath,
-                                  mask = point_buffer(data, postcode_dist, "EPSG:27700"))
+        with warnings.catch_warnings():
+            # Handle a bug when reading files
+            warnings.filterwarnings('ignore', message = "Sequential read of iterator was interrupted")
+            postcodes = gpd.read_file(codepoint_filepath,
+                                      mask = point_buffer(data, postcode_dist, "EPSG:27700"))
         postcodes.crs = "EPSG:27700"
         # Keep only necessary columns
         postcodes = postcodes[['Postcode', 'geometry']]

@@ -287,15 +287,17 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
         roads['geometry'] = roads.geometry.apply(redistribute_vertices, distance = 2)
         
         # Extract the coordinates of each vertex for each line as points with their road access type
-        road_type_points = gpd.GeoDataFrame(crs = "EPSG:27700")
+        road_type_points = []
         for index, row in roads.iterrows():
             coords = [i for i in row['geometry'].coords]
             temp = gpd.GeoDataFrame(crs = "EPSG:27700",
                                     geometry = gpd.points_from_xy([x for x, y in coords],
                                                                   [y for x, y in coords]))
             temp['RoadAccessType'] = row['roadFunction']
-            road_type_points = road_type_points.append(temp)
-            
+            road_type_points.append(temp)
+        road_type_points = gpd.GeoDataFrame(pd.concat(road_type_points,
+                                                      ignore_index = True),
+                                            crs = road_type_points[0].crs)
         # Get the closest road type point and distance in metres
         data = get_nearest(data, road_type_points)
         data['RoadDistanceMetres'] = data.pop('dist').round(0).astype(int)
@@ -460,7 +462,7 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
     # Export to WGS84 GPX
     with open(os.path.join(export_directory,
                            location_type + "_" + date + "_WGS84.gpx"),
-              'w') as file:
+              'w', encoding = "UTF-8") as file:
         file.write(gpx.to_xml(version = "1.1"))
 
     print(" - Done\n")

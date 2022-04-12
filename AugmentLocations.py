@@ -69,7 +69,7 @@ import gpxpy
 import gpxpy.gpx as g
 from datetime import datetime
 from scipy.spatial import cKDTree
-from shapely.ops import cascaded_union
+from shapely.ops import unary_union
 from shapely.geometry import LineString
 
 
@@ -108,7 +108,7 @@ def get_what3words(lat, long):
 
 def point_buffer(points, distance, crs):
     buffer = points.buffer(distance)
-    return gpd.GeoSeries(cascaded_union(buffer), crs = crs)
+    return gpd.GeoSeries(unary_union(buffer), crs = crs)
 
 def get_nearest(gdA, gdB):
     nA = np.array(list(gdA.geometry.apply(lambda x: (x.x, x.y))))
@@ -286,7 +286,7 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
         roads = roads[['roadFunction', 'geometry']]
         
         # Clip roads to the buffer and convert to single part
-        roads = gpd.clip(roads, point_buffer(data, road_dist, "EPSG:27700")).explode()
+        roads = gpd.clip(roads, point_buffer(data, road_dist, "EPSG:27700")).explode(index_parts = True)
         # Resample the road vertices
         roads['geometry'] = roads.geometry.apply(redistribute_vertices, distance = 2)
         

@@ -186,15 +186,18 @@ for path in [ap_filepath, rv_filepath, codepoint_filepath,
     if not os.path.exists(path):
         raise Exception('Path ' + str(path) + ' does not exist')
 
-# Check for correct transformation
+# Check for correct transformation and obtain if not present
 import pyproj
 tg = pyproj.transformer.TransformerGroup(27700, 4326)
 descriptions = "\n\n".join([str(i) for i in tg.transformers])
 if "OSTN15_NTv2" not in descriptions:
-    raise Exception("OSTN15_NTv2 is not present, extract the files in https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to " + pyproj.datadir.get_data_dir())
+    import requests, zipfile, io
+    r = requests.get("https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip")
+    z = zipfile.ZipFile(io.BytesIO(r.content))
+    z.extractall(pyproj.datadir.get_data_dir())
 
+    
 
- 
 # Timestamp
 date = datetime.now().strftime("%Y-%m-%d")
 

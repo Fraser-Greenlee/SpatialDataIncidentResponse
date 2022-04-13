@@ -191,10 +191,11 @@ import pyproj
 tg = pyproj.transformer.TransformerGroup(27700, 4326)
 descriptions = "\n\n".join([str(i) for i in tg.transformers])
 if "OSTN15_NTv2" not in descriptions:
-    import requests, zipfile, io
-    r = requests.get("https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip")
-    z = zipfile.ZipFile(io.BytesIO(r.content))
-    z.extractall(pyproj.datadir.get_data_dir())
+    raise Exception("OSTN15_NTv2 is not present, extract the files in https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to " + pyproj.datadir.get_data_dir())
+    #import requests, zipfile, io
+    #r = requests.get("https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip")
+    #z = zipfile.ZipFile(io.BytesIO(r.content))
+    #z.extractall(pyproj.datadir.get_data_dir())
 
     
 

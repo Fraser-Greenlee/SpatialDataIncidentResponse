@@ -9,7 +9,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 ### Methodology
-- use ```Mapping.qgz``` ([QGIS](https://qgis.org/en/site/) project containing various web map services for remote location mapping) to generate WGS84 longitude, latitude coordinates for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
+- download and open ```Mapping.qgz```, a [QGIS](https://qgis.org/en/site/) project containing various web map services for remote location mapping. Generate WGS84 longitude, latitude coordinates for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
 
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
   
@@ -21,9 +21,9 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 ### ```AugmentLocations.ipynb```
-```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account. Everything runs in the cloud, so no setup is required on your local PC and anyone can run the code.
+```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) - everything runs in the cloud, so no setup is required on your local PC which is best for those with no technical coding experience. It runs in a web browser and accesses files hosted on your Google Drive and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
 
-```AugmentLocations.ipynb``` requires some local variables to be defined in the code by the user such as API keys. Filepaths and directories are handled automatically and are already entered for use with Google Drive.
+```AugmentLocations.ipynb``` requires some local variables to be defined in the code by the user such as API keys, look for the line "# User-defined variables". Filepaths and directories are handled automatically and are already entered for use with Google Drive.
 
 The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 

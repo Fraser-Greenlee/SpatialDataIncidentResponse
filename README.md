@@ -15,12 +15,12 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
   
   _Extracting coordinates for a location using right-click with the hand tool selected in QGIS_
 
-- sign in to your free Google account, visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records, and export the data in useful formats
+- visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records, and export the data in useful formats
 - serve the exported files according to your requirements
 
 
 
-### AugmentLocations
+### ```AugmentLocations.ipynb```
 ```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account.
 
 It requires some local variables to be defined in the code by the user such as API keys. Filepaths and directories are handled automatically and are already entered for use with Google Drive.

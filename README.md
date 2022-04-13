@@ -13,10 +13,37 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
   
-  _Extracting coordinates for a location using right-click with the hand tool selected_
+  _Extracting coordinates for a location using right-click with the hand tool selected in QGIS_
 
-- use ```AugmentLocations.py``` to automatically add conversions and metadata to the spreadsheet records, and export the data in useful formats
+- use ```AugmentLocations.py``` or ```AugmentLocationsGoogle.ipynb``` to automatically add spatial conversions and metadata to the spreadsheet records, and export the data in useful formats
 - serve the exported files according to your requirements
+
+
+
+### AugmentLocations
+```AugmentLocations.py``` requires a local python installation on your PC to function, [Anaconda](https://www.anaconda.com/) is recommended. ```AugmentLocationsGoogle.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account.
+
+Both ```AugmentLocations.py``` and ```AugmentLocationsGoogle.ipynb``` require some local variables to be defined in the code by the user such as API keys, filepaths and directories. ```AugmentLocationsGoogle.ipynb``` only requires API keys to be defined, as all filepaths and directories are handled automatically and are already entered for use with Google Drive.
+
+The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
+
+**Function:**
+- ingests APs and RVs recorded in spreadsheets
+- adds spatial conversions
+    - Postcode - Nearest postcode
+    - Longitude - Decimal degrees (WGS84)
+    - Latitude - Decimal degrees (WGS84)
+    - Easting - Metres (British National Grid)
+    - Northing - Metres (British National Grid)
+    - OSGridRef1m - Ordnance Survey 1m grid reference
+    - What3Words - What3Words address
+    - GoogleMapsURL - Google Maps link for directions and Street View
+- and metadata
+    - RoadAccessType - Nearest road type
+    - MobileCoverage - Minimum outdoor mobile phone coverage
+
+  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="500">
+- exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
 
 
 
@@ -42,18 +69,3 @@ Below are free and open source methods of serving the data that also allow the i
 - offline navigation and data access
   
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="300">
-
-
-
-
-### AugmentLocations.py
-```AugmentLocations.py``` uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
-
-**Dependencies:** Numpy, Pandas, GeoPandas, GPXpy, ODF
-
-**Function:**
-- ingests APs and RVs recorded in spreadsheets
-- adds spatial conversions and metadata using the WGS84 longitude, latitude coordinates
-
-  <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="500">
-- exports this information in a variety of useful formats (.csv, .gpkg, .gpx)

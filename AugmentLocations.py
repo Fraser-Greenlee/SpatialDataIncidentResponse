@@ -190,12 +190,10 @@ for path in [ap_filepath, rv_filepath, codepoint_filepath,
 import pyproj
 tg = pyproj.transformer.TransformerGroup(27700, 4326)
 descriptions = "\n\n".join([str(i) for i in tg.transformers])
+accuracy = min([i.accuracy for i in tg.transformers if i.accuracy > 0])
+print('Transformation accuracy is', accuracy, 'm')
 if "OSTN15_NTv2" not in descriptions:
-    raise Exception("OSTN15_NTv2 is not present, extract the files in https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to " + pyproj.datadir.get_data_dir())
-    #import requests, zipfile, io
-    #r = requests.get("https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip")
-    #z = zipfile.ZipFile(io.BytesIO(r.content))
-    #z.extractall(pyproj.datadir.get_data_dir())
+    print("The OSTN15_NTv2 transformation is not present. To achieve a higher accuracy, extract the files in https://ordnancesurvey.co.uk/documents/resources/OSTN15-NTv2.zip to " + pyproj.datadir.get_data_dir())
 
     
 
@@ -205,7 +203,7 @@ date = datetime.now().strftime("%Y-%m-%d")
 # Loop through each location type and spreadsheet
 for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
     
-    print('Processing', location_type)
+    print("\nProcessing", location_type)
     
     # Read in the master spreadsheet
     data = pd.read_excel(path, engine = 'odf')
@@ -476,8 +474,8 @@ for location_type, path in zip(['APs', 'RVs'], [ap_filepath, rv_filepath]):
               'w', encoding = "UTF-8") as file:
         file.write(gpx.to_xml(version = "1.1"))
 
-    print(" - Done\n")
+    print(" - Done")
 
 
 
-print('Complete')
+print("\nComplete")

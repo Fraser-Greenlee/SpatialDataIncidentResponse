@@ -20,10 +20,10 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 
-### ```AugmentLocations.ipynb```
-```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) - everything runs in the cloud, so no setup is required on your local PC which is best for those with no technical coding experience. It runs in a web browser and accesses files hosted on your Google Drive and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
+### [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb)
+[```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) is created for use with [Google Colaboratory](https://colab.research.google.com/) - everything runs in the cloud, so no setup is required on your local PC which is best for those with no technical coding experience. It runs in a web browser and accesses files hosted on your Google Drive and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
 
-```AugmentLocations.ipynb``` requires some local variables to be defined in the code by the user such as API keys, look for the line "# User-defined variables". Filepaths and directories are handled automatically and are already entered for use with Google Drive.
+[```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) requires some local variables to be defined in the code by the user such as API keys, look for the line "# User-defined variables". Filepaths and directories are handled automatically and are already entered for use with Google Drive.
 
 The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 

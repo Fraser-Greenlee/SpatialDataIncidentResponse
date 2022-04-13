@@ -15,15 +15,15 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
   
   _Extracting coordinates for a location using right-click with the hand tool selected in QGIS_
 
-- use ```AugmentLocations.py``` or ```AugmentLocationsGoogle.ipynb``` to automatically add spatial conversions and metadata to the spreadsheet records, and export the data in useful formats
+- use ```AugmentLocations.ipynb``` to automatically add spatial conversions and metadata to the spreadsheet records, and export the data in useful formats
 - serve the exported files according to your requirements
 
 
 
 ### AugmentLocations
-```AugmentLocations.py``` requires a local python installation on your PC to function, [Anaconda](https://www.anaconda.com/) is recommended. ```AugmentLocationsGoogle.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account.
+```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account.
 
-Both ```AugmentLocations.py``` and ```AugmentLocationsGoogle.ipynb``` require some local variables to be defined in the code by the user such as API keys, filepaths and directories. ```AugmentLocationsGoogle.ipynb``` only requires API keys to be defined, as all filepaths and directories are handled automatically and are already entered for use with Google Drive.
+It requires some local variables to be defined in the code by the user such as API keys, all filepaths and directories are handled automatically and are already entered for use with Google Drive.
 
 The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 

@@ -21,9 +21,9 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 ### ```AugmentLocations.ipynb```
-```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account.
+```AugmentLocations.ipynb``` is created for use with [Google Colaboratory](https://colab.research.google.com/) which runs in a web browser (best for those with no technical coding experience) and accesses files hosted on your Google Drive and therefore requires a free Google account. Everything runs in the cloud, so no setup is required on your local PC and anyone can run the code.
 
-It requires some local variables to be defined in the code by the user such as API keys. Filepaths and directories are handled automatically and are already entered for use with Google Drive.
+```AugmentLocations.ipynb``` requires some local variables to be defined in the code by the user such as API keys. Filepaths and directories are handled automatically and are already entered for use with Google Drive.
 
 The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 

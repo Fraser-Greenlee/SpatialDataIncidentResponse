@@ -9,7 +9,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 
 ### Methodology
-- download and open ```Mapping.qgz```, a [QGIS](https://qgis.org/en/site/) project containing various web map services for remote location mapping. Generate WGS84 longitude, latitude coordinates for each location and paste them into a spreadsheet template (```APs_Master.ods``` or ```RVs_Master.ods```) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
+- download and open [```Mapping.qgz```](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/raw/main/Mapping.qgz), a [QGIS](https://qgis.org/en/site/) project containing various web map services for remote location mapping. Generate WGS84 longitude, latitude coordinates for each location and paste them into a spreadsheet template ([```APs_Master.ods```](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/raw/main/APs_Master.ods) or [```RVs_Master.ods```](https://github.com/EdwardALockhart/SpatialDataIncidentResponse/raw/main/RVs_Master.ods)) depending on the location type, adding additional information and columns as required (these will be unaltered and will carry through)
 
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Coordinates.png" height="300">
   

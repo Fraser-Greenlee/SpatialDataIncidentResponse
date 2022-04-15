@@ -62,4 +62,4 @@ The code uses data available only for mainland Great Britain, therefore areas ou
   
   *How the original coordinates are converted and used to produce the spatial conversions and metadata*
   
-- exports this information in a variety of useful formats (.csv, .gpkg, .gpx)
+- exports these data in a variety of formats (.csv, .gpkg, .gpx)

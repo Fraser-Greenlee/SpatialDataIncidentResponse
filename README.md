@@ -56,7 +56,10 @@ The code uses data available only for mainland Great Britain, therefore areas ou
     - GoogleMapsURL - Google Maps link for directions and Street View
 - and metadata
     - RoadAccessType - Nearest road type
-    - MobileCoverage - Minimum outdoor mobile phone coverage
+    - MobileCoverage - Minimum outdoor mobile phone coverage for all providers at buildings within a postcode
 
   <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Augment.png" height="500">
+  
+  *How the original coordinates are converted and used to produce the spatial conversions and metadata*
+  
 - exports this information in a variety of useful formats (.csv, .gpkg, .gpx)

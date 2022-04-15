@@ -20,7 +20,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
   
   *Extracting longitude, latitude coordinates for a location using right-click with the hand tool selected in QGIS*
 
-- **Data Augmentation** - visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records which are exported in a variety of useful formats (.csv, .gpkg, .gpx)
+- **Data Augmentation** - visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records which are exported in a variety of formats (.csv, .gpkg, .gpx)
 
 - **Data Serving** - serve the exported files according to your requirements, free and open source examples are shown below
 

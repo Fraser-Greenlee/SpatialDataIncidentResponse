@@ -39,7 +39,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
     <img src="https://github.com/EdwardALockhart/SpatialDataIncidentResponse/blob/main/Content/Mobile.png" height="300">
 
 ### [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb)
-[```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) is created for use with [Google Colaboratory](https://colab.research.google.com/) - python code runs temporarily in the cloud, so no setup is required on your local PC. It runs in a web browser and accesses files hosted on your Google Drive for persistent storage between sessions, and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
+[```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) is created for use with [Google Colaboratory](https://colab.research.google.com/), where python code can be run temporarily in the cloud, so no setup is required on your local PC. It runs in a web browser and accesses files hosted on your Google Drive for persistent storage between sessions, and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
 
 The code uses data available only for mainland Great Britain, therefore areas outside mainland Great Britain are unsupported.
 

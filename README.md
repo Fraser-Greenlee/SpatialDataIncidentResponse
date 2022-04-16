@@ -4,7 +4,14 @@
 
 ### Rationale
 
-Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations. This provides the opportunity to accurately record these locations and make them readily accessible in advance of incidents occurring, allowing incident controllers access to detailed location information (listed below) ready for rapid and error-free sharing with team members and other emergency services. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs) and the methodology below describes how to collect, augment and serve these data. This process is maintained by a dedicated team data controller.
+Cave Rescue teams have a unique use case regarding spatial data, specifically the need to rapidly share and navigate to often predetermined and precise incident locations. This provides the opportunity to accurately record these locations and make them readily accessible in advance of incidents occurring, allowing incident controllers access to detailed location information ready for rapid and error-free sharing with team members and other emergency services. These locations comprise of cave and mine Access Points (APs) and Rendezvous points (RVs).
+
+The methodology below describes how to:
+- collect - collate location data from various sources into a structured format based on longitude and latitude
+- augment - add accurate spatial conversions and metadata to each location
+- serve - make the augmented locations accessible
+
+A spatial catalogue of APs and RVs helps with identifing all possible underground locations in an area and what RVs are best positioned for the task at hand. Having accurate spatial conversions allows rapid and error-free sharing of locations. Google Maps URLs allow rapid navigation to RVs and an accurate assessment of ETA.
 
 
 
@@ -20,7 +27,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
   
   *Extracting longitude, latitude coordinates for a location using right-click with the hand tool selected in QGIS*
 
-- **Data Augmentation** - visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records which are exported in a variety of formats (.csv, .gpkg, .gpx)
+- **Data Augmentation** - visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the spreadsheet records which are exported in a variety of formats (.csv, .gpkg, .gpx) for serving
 
 - **Data Serving** - serve the exported files according to your requirements, free and open source examples are shown below
 

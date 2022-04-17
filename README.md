@@ -14,9 +14,9 @@ The free and open source methodology (Great Britain only) below describes how to
 Why a cave rescue team would want to use this methodology:
 - a structured catalogue of APs and RVs forms the foundation for intelligent incident response planning
 - viewing the data on interactive maps with satellite imagery or topographic maps allows incident controllers to view the spatial relationship between APs and RVs to identify what RVs are best positioned for the task at hand
-- having multiple pre-calculated spatial formats that describe the same location facilitates information sharing
-- Google Maps URLs allow automated navigation to RVs and provide an accurate assessment of ETA accounting for current road conditions in addition to allowing incident controllers to assess RV accessibility and suitability on Google Street View if available
-- road access type provides an assessment of road accessibility (road class) including identifying restricted access roads which require special access at RVs before team members arrive
+- having multiple pre-calculated spatial conversions that describe the same location facilitates error-free information sharing
+- Google Maps URLs allow automated navigation to RVs and provide an accurate assessment of ETA accounting for current road conditions in addition to allowing incident controllers to assess RV suitability on Google Street View if available
+- road access type provides an assessment of road accessibility, including identifying restricted access roads which may be gated, at RVs before team members arrive
 - mobile phone coverage provides an assessment of available communications at RVs before team members arrive
 - the data are exported in a variety of formats for use with mobile and GPS devices, online maps and GIS software
 - Google cloud tools (Colaboratory, Drive and Maps) allow users to implement the methodology regardless of their technical experience or hardware and software constraints

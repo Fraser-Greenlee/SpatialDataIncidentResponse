@@ -19,7 +19,7 @@ Why a cave rescue team would want to use this methodology:
 - road access type provides an assessment of road accessibility, including identifying restricted access roads which may be gated, at RVs before team members arrive
 - mobile phone coverage provides an assessment of available communications at RVs before team members arrive
 - the data are exported in a variety of formats for use with mobile and GPS devices, online maps and GIS software
-- Google cloud tools (Colaboratory, Drive and Maps) allow users to implement the methodology regardless of their technical experience or hardware and software constraints
+- Google cloud tools (Colaboratory, Drive and Maps) allow users to implement the methodology regardless of their technical experience or hardware and software constraints, therefore this methodology requires a free Google account
 
 
 
@@ -36,7 +36,7 @@ Why a cave rescue team would want to use this methodology:
     *Extracting longitude, latitude coordinates for a location using right-click with the hand tool selected in QGIS*
 
 
-2. **Data Augmentation** - Visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the location records which are exported in a variety of formats (.csv, .gpkg, .gpx) to Google Drive for serving. [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) is created for use with [Google Colaboratory](https://colab.research.google.com/), where python code can be run temporarily on a virtual machine, so no setup is required on your local PC. It runs in a web browser and accesses files hosted on your Google Drive for persistent storage between sessions, and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
+2. **Data Augmentation** - Visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to automatically add spatial conversions and metadata to the location records which are exported in a variety of formats (.csv, .gpkg, .gpx) to Google Drive in a root folder called ```_SpatialData```. [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) is created for use with [Google Colaboratory](https://colab.research.google.com/), where python code can be run temporarily on a virtual machine, so no setup is required on your local PC. It runs in a web browser and accesses files hosted on your Google Drive for persistent storage between sessions, and therefore requires a free Google account. The code can also be used on a local PC with a python installation, [Anaconda](https://www.anaconda.com/) is recommended.
 
     The code uses data available only for Great Britain from the Ordnance Survey (GB postcodes and roads), therefore areas outside Great Britain are unsupported.
 

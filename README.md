@@ -37,7 +37,7 @@ Why a cave rescue team would want to use this methodology:
 
 
 
-2. **Data Augmentation** - Visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to add spatial conversions and metadata to the location records which are exported in a variety of formats (.csv, .gpkg, .gpx) to ```_SpatialData/Processed``` on Google Drive. [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) uses [Google Colaboratory](https://colab.research.google.com/), where python code can be run temporarily on a virtual machine within a web browser.
+2. **Data Augmentation** - Visit [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) and follow the instructions to add spatial conversions and metadata to the location records which are exported in a variety of formats (.csv, .gpkg, .gpx) to ```_SpatialData/Processed``` on Google Drive. [```AugmentLocations.ipynb```](https://colab.research.google.com/github/EdwardALockhart/SpatialDataIncidentResponse/blob/main/AugmentLocations.ipynb) uses [Google Colaboratory](https://colab.research.google.com/), where python code can be run temporarily on a virtual machine through a web browser.
 
     The code uses data available only for Great Britain from the Ordnance Survey (GB postcodes and roads), therefore areas outside Great Britain are unsupported.
 

@@ -8,7 +8,7 @@ Cave Rescue teams have a unique use case regarding spatial data, specifically th
 
 The free and open source methodology (Great Britain only) below describes how to:
 1. **Collate** AP and RV location data from various sources into a simple structured format
-2. **Augment** these data with accurate spatial conversions and metadata (listed below)
+2. **Augment** these data with spatial conversions and metadata (listed below)
 3. **Serve** the augmented data on a map in a way that the underlying information can be interrogated
 
 Why a cave rescue team would want to use this methodology:
